@@ -30,5 +30,9 @@ int main()
       enqueue(b, i);
   }
 
-  print(merge(a, b));
+  Queue *sorted = merge(a, b);
+  print(sorted);
+  destroy(a);
+  destroy(b);
+  destroy(sorted);
 }

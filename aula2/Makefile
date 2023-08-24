@@ -5,5 +5,8 @@ all:
 	gcc -o jackpot jackpot.c queue.c
 	gcc -o jackpot2 jackpot2.c queue.c
 	gcc -o merge merge.c queue.c
+	gcc -o reverse reverse.c queue.c
+	gcc -o josephus josephus.c queue.c
+	gcc -o pagefault pagefault.c queue.c 
 clean:
 	rm par_impar islands imagens jackpot
