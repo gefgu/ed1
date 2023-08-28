@@ -7,6 +7,7 @@ all:
 	gcc -o palindrome palindrome.c stack.c
 	gcc -o prime_factorization prime_factorization.c stack.c
 	gcc -o reverse reverse.c stack.c queue.c
+	gcc -o game game.c stack.c
 	gcc -o minesweeper minesweeper.c pstack.c
 clean:
 	rm elimina-par maze parser polish reverse minesweeper
