@@ -1,4 +1,4 @@
-#include "queue.h"
+#include "dqueue.h"
 
 /*Função que cria e inicializa uma fila de tamanho {size}.*/
 Queue *create(int size)
@@ -7,12 +7,12 @@ Queue *create(int size)
   q->front = 0;
   q->back = 0;
   q->size = size;
-  q->array = (int *)malloc(size * sizeof(int));
+  q->array = (double *)malloc(size * sizeof(double));
   return q;
 }
 
 /*Função para enfileirar {elem} na fila {q}.*/
-void enqueue(Queue *q, int elem)
+void enqueue(Queue *q, double elem)
 {
   if (full(q))
   {
@@ -24,20 +24,20 @@ void enqueue(Queue *q, int elem)
 }
 
 /*Função para desenfileirar o primeiro elemento da fila {q}.*/
-int dequeue(Queue *q)
+double dequeue(Queue *q)
 {
   if (empty(q))
   {
     printf("error: queue underflow!\n");
     exit(1);
   }
-  int e = q->array[q->front];
+  double e = q->array[q->front];
   q->front = (q->front + 1) % q->size;
   return e;
 }
 
 /*Função que retorna mas não remove o primeiro elemento de {q}.*/
-int front(Queue *q)
+double front(Queue *q)
 {
   if (!empty(q))
     return q->array[q->front];
@@ -64,7 +64,7 @@ void print(Queue *q)
   printf("Queue: ");
   for (i = q->front; i != q->back; i = (i + 1) % q->size)
   {
-    printf("%d ", q->array[i]);
+    printf("%lf ", q->array[i]);
   }
   printf("\n");
 }
@@ -83,7 +83,7 @@ int getsize(Queue *q)
 }
 
 /*Função que retorna {true} se o elemento {e} existe em {q}*/
-int search(Queue *q, int e)
+int search(Queue *q, double e)
 {
   int i;
   for (i = q->front; i != q->back; i = (i + 1) % q->size)

@@ -24,17 +24,29 @@ void print_matrix(char M[][N], int n)
   }
 }
 
+void show(char M[][N], int n)
+{
+  system("clear");
+  print_matrix(M, n);
+  sleep(1);
+}
+
 void conquer(char M[][N], int i, int j, int n, int nlabel)
 {
+  show(M, n);
   Queue *q = create((n * n) + 1); /*supondo pior caso*/
   enqueue(q, (point){i, j});
   int k, l;
-  int x, y;
-  M[i][j] = ' ';
+  int x, y, flag;
+  M[i][j] = '0' + nlabel;
+  show(M, n);
   while (!empty(q))
   {
     point p = dequeue(q);
-    M[p.x][p.y] = ' ';
+    flag = (M[p.x][p.y] != '*');
+    M[p.x][p.y] = '0' + nlabel;
+    if (!flag)
+      show(M, n);
     // box around
     for (k = 0; k < 3; k++)
     {
@@ -45,7 +57,8 @@ void conquer(char M[][N], int i, int j, int n, int nlabel)
         if (inside(x, y, N) && M[x][y] == '*')
         {
           enqueue(q, (point){x, y});
-          M[x][y] = ' ';
+          M[x][y] = '0' + nlabel;
+          show(M, n);
         }
       }
     }
@@ -88,7 +101,9 @@ int main()
        {'*', '*', '*', '*', ' ', ' ', ' ', '*', '*', '*'}};
 
   print_matrix(M, n);
-  printf("Número de ilhas: %d\n", count_islands(M, n));
+  int islands = count_islands(M, n);
+  system("clear");
+  printf("Número de ilhas: %d\n", islands);
   print_matrix(M, n);
   return 0;
 }

@@ -9,10 +9,10 @@ int main()
   /*Use somente as operações definidas em queue.h*/
   /*Não use para resolver esse exercício o operador -> aqui!*/
   /*Terminar*/
-  Queue *pares = create(n);
-  Queue *impares = create(n);
+  Queue *pares = create(n + 1);
+  Queue *impares = create(n + 1);
 
-  i = 1; // evita queue overflow
+  i = 0;
   while (i < n)
   {
     val = rand() % 100;

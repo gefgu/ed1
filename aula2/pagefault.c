@@ -15,13 +15,7 @@ int pfault(int requests[], int nreq, int nslots)
 
   for (i = 1; i < nreq; i++)
   {
-    alreadyHere = 0;
-    for (j = 0; j < nslots; j++)
-    {
-      if (front(q) == requests[i])
-        alreadyHere = 1;
-      enqueue(q, dequeue(q));
-    }
+    alreadyHere = search(q, requests[i]);
 
     if (!alreadyHere)
     {
