@@ -1,6 +1,7 @@
 all:
 	gcc -o elimina-par elimina-par.c stack.c
 	gcc -o maze maze.c pstack.c
+	gcc -o maze2 maze2.c pstack.c
 	gcc -o parser parser.c stack.c
 	gcc -o polish polish.c stack.c
 	gcc -o polish_solver polish_solver.c stack.c
