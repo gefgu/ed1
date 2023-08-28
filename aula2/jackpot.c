@@ -5,7 +5,8 @@ void jackpot(int n, int r)
 {
   /*Terminar*/
   int i, j, val, aleatorio;
-  Queue *queues[3];
+  Queue **queues;
+  queues = (Queue **)malloc(n * sizeof(Queue *));
   for (i = 0; i < 3; i++)
     queues[i] = create(r + 1);
 
