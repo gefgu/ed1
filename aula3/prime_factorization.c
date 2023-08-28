@@ -1,32 +1,50 @@
 #include "stack.h"
 
-int compute_polish_expression(char *c)
+int *sieve(int n)
 {
-  int len = strlen(c);
-  Stack *s = create(len);
-  int i, flag = 1;
-
-  for (i = 0; i < len / 2; i++)
+  int *primos = (int *)malloc(sizeof(int) * n);
+  int phi = 1, i, j;
+  int eh_primo;
+  primos[0] = 2;
+  for (i = 3; phi < n; i++)
   {
-    push(s, c[i]);
+    eh_primo = 1;
+    for (j = 0; j < phi && primos[j] * primos[j] < i && eh_primo; j++)
+    {
+      if (i % primos[j] == 0)
+        eh_primo = 0;
+    }
+
+    if (eh_primo)
+      primos[phi++] = i;
   }
 
-  for (i = (len + 1) / 2; i < len && flag; i++)
+  return primos;
+}
+
+void prime_factorization(int n)
+{
+  int *primos = sieve(20);
+  int i;
+  Stack *s = create(100);
+
+  for (i = 0; i < 20 && n > 1; i++)
   {
-    if (c[i] != pop(s))
-      flag = 0;
+    while (n % primos[i] == 0)
+    {
+      push(s, primos[i]);
+      n /= primos[i];
+    }
   }
 
+  print(s);
   destroy(s);
-  return flag;
+  free(primos);
 }
 
 int main()
 {
-  char *c = "radar";
-  // char *c = "asa";
-  // char *c = "renner";
-  // char *c = "gustavo";
-  printf("%d\n", compute_polish_expression(c));
+  int n = 3960;
+  prime_factorization(n);
   return 0;
 }
