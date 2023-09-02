@@ -1,12 +1,19 @@
 # Repositório de ED1 - UTFPR
 
-Navegação
+Use as pastas acima para encontrar os arquivos com as resoluções.
 
-- [Aula 2]
-- [Aula 3]
+## Navegação (Com os exercícios mais interessantes separados por aula)
+
+- [Aula 2](#aula-2)
+  - [Jackpot](#jackpot) 
+- [Aula 3](#aula-3)
 
 
-# Aula 2
+## Aula 2
+
+### Jackpot
+
+[![Vídeo do Jackpot](aula2/jackpot.mp4)]
 
 
-# Aula 3
+## Aula 3
