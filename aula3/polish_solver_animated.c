@@ -1,7 +1,28 @@
 #include "stack.h"
+#include <time.h>
+
+#define CYN "\x1B[36m"
+#define RESET "\x1B[0m"
+
+void show_expression(char *c, int pos)
+{
+  int i;
+  printf("Expressão: ");
+  for (i = 0; c[i] != '\0'; i++)
+  {
+    if (i == pos)
+      printf(CYN "%c" RESET, c[i]);
+    else
+    {
+      printf("%c", c[i]);
+    }
+  }
+  printf("\n");
+}
 
 int compute_polish_expression(char *c)
 {
+  struct timespec second, nano = {0, 500000000};
   Stack *s = create(strlen(c)); // numeros
   int i = 0;
   int a, b;
@@ -26,6 +47,12 @@ int compute_polish_expression(char *c)
       b = pop(s);
       push(s, a * b);
     }
+
+    system("clear");
+    show_expression(c, i);
+    printf("\n");
+    print(s);
+    nanosleep(&nano, &second);
 
     i++;
   }

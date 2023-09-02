@@ -7,6 +7,7 @@ all:
 	gcc -o polish polish.c stack.c
 	gcc -o polish_animated polish_animated.c stack.c
 	gcc -o polish_solver polish_solver.c stack.c
+	gcc -o polish_solver_animated polish_solver_animated.c stack.c
 	gcc -o palindrome palindrome.c stack.c
 	gcc -o prime_factorization prime_factorization.c stack.c
 	gcc -o reverse reverse.c stack.c queue.c
