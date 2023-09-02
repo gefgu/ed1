@@ -12,6 +12,7 @@ all:
 	gcc -o game game.c stack.c
 	gcc -o minesweeper minesweeper.c pstack.c
 	gcc -o minesweeper2 minesweeper2.c pstack.c
+	gcc -Wall -o html html.c sstack.c
 clean:
 	rm elimina-par maze parser polish reverse minesweeper
 
