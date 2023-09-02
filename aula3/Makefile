@@ -10,6 +10,7 @@ all:
 	gcc -o reverse reverse.c stack.c queue.c
 	gcc -o game game.c stack.c
 	gcc -o minesweeper minesweeper.c pstack.c
+	gcc -o minesweeper2 minesweeper2.c pstack.c
 clean:
 	rm elimina-par maze parser polish reverse minesweeper
 
