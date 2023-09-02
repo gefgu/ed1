@@ -5,6 +5,7 @@ all:
 	gcc -o maze_animated maze_animated.c pstack.c
 	gcc -o parser parser.c stack.c
 	gcc -o polish polish.c stack.c
+	gcc -o polish_animated polish_animated.c stack.c
 	gcc -o polish_solver polish_solver.c stack.c
 	gcc -o palindrome palindrome.c stack.c
 	gcc -o prime_factorization prime_factorization.c stack.c
