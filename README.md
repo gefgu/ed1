@@ -1,7 +1,8 @@
 # Repositório de ED1 - UTFPR
 
 Use as pastas acima para encontrar os arquivos com as resoluções.
-(Os exercícios mais interessantes separados por aula)
+
+Os exercícios mais interessantes separados por aula:
 
 - [Repositório de ED1 - UTFPR](#repositório-de-ed1---utfpr)
   - [Aula 2 - Fila](#aula-2---fila)
