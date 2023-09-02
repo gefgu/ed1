@@ -4,16 +4,16 @@ Use as pastas acima para encontrar os arquivos com as resoluções.
 (Os exercícios mais interessantes separados por aula)
 
 - [Repositório de ED1 - UTFPR](#repositório-de-ed1---utfpr)
-  - [Aula 2](#aula-2)
+  - [Aula 2 - Fila](#aula-2---fila)
     - [Jackpot](#jackpot)
     - [Merge](#merge)
     - [Reverse](#reverse)
     - [Josephus](#josephus)
     - [Islands](#islands)
-  - [Aula 3](#aula-3)
+  - [Aula 3 - Pilha](#aula-3---pilha)
 
 
-## Aula 2
+## Aula 2 - Fila
 
 ### Jackpot
 
@@ -47,4 +47,4 @@ https://github.com/gefgu/ed1/assets/53129852/7052fefc-c987-42c5-b486-499008f2d2a
 https://github.com/gefgu/ed1/assets/53129852/fa3da559-d979-4de7-bf6a-e2982db1fcc2
 
 
-## Aula 3
+## Aula 3 - Pilha
