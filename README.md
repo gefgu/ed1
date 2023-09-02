@@ -1,6 +1,6 @@
 # Repositório de ED1 - UTFPR
 
-Use as pastas acima para encontrar os arquivos com as resoluções.
+Use as pastas acima para encontrar os arquivos com as resoluções. Aqueles com sufixo (eg. "2" ou "animated") são explorações de ideias, aqueles sem sufixo são as resoluções dos exercícios em si.
 
 Os exercícios mais interessantes separados por aula:
 
