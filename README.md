@@ -11,6 +11,10 @@ Use as pastas acima para encontrar os arquivos com as resoluções.
     - [Josephus](#josephus)
     - [Islands](#islands)
   - [Aula 3 - Pilha](#aula-3---pilha)
+    - [Polish](#polish)
+    - [Polish Solver](#polish-solver)
+    - [Labirinto](#labirinto)
+    - [Campo Minado](#campo-minado)
 
 
 ## Aula 2 - Fila
@@ -48,3 +52,11 @@ https://github.com/gefgu/ed1/assets/53129852/fa3da559-d979-4de7-bf6a-e2982db1fcc
 
 
 ## Aula 3 - Pilha
+
+### Polish
+
+### Polish Solver
+
+### Labirinto
+
+### Campo Minado
