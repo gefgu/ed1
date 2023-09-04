@@ -1,10 +1,16 @@
 #include "list.h"
 
 /* */
-List* copy(List *A)
+List *copy(List *l)
 {
-    /*Terminar*/
-    
+    List *cp = create();
+    List *original = l;
+    while (original != NULL)
+    {
+        cp = insert_back(cp, original->data);
+        original = original->next;
+    }
+    return cp;
 }
 
 /* */
