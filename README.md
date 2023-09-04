@@ -16,6 +16,8 @@ Os exercícios mais interessantes separados por aula:
     - [Polish Solver](#polish-solver)
     - [Labirinto](#labirinto)
     - [Campo Minado](#campo-minado)
+  - [Extra](#extra)
+    - [Prettier no VS Code (Formatação de Código)](#prettier-no-vs-code-formatação-de-código)
 
 
 ## Aula 2 - Fila
@@ -77,3 +79,7 @@ https://github.com/gefgu/ed1/assets/53129852/e1be2f3f-8c35-40a2-9306-5a9ce82f522
 
 https://github.com/gefgu/ed1/assets/53129852/8c62617f-fc88-4fde-9052-5b264fe4dbda
 
+
+## Extra
+
+### Prettier no VS Code (Formatação de Código)
