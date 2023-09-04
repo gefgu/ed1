@@ -1,7 +1,8 @@
 # Repositório de ED1 - UTFPR
 
-Use as pastas acima para encontrar os arquivos com as resoluções.
-(Os exercícios mais interessantes separados por aula)
+Use as pastas acima para encontrar os arquivos com as resoluções. Aqueles com sufixo (eg. "2" ou "animated") são explorações de ideias, aqueles sem sufixo são as resoluções dos exercícios em si.
+
+Os exercícios mais interessantes separados por aula:
 
 - [Repositório de ED1 - UTFPR](#repositório-de-ed1---utfpr)
   - [Aula 2 - Fila](#aula-2---fila)
@@ -55,8 +56,24 @@ https://github.com/gefgu/ed1/assets/53129852/fa3da559-d979-4de7-bf6a-e2982db1fcc
 
 ### Polish
 
+
+https://github.com/gefgu/ed1/assets/53129852/5bca85ee-d555-43d9-a29b-04c35954a965
+
+
 ### Polish Solver
+
+
+https://github.com/gefgu/ed1/assets/53129852/0275e15d-f13b-4c71-a939-3cd97689667b
+
 
 ### Labirinto
 
+
+https://github.com/gefgu/ed1/assets/53129852/e1be2f3f-8c35-40a2-9306-5a9ce82f522c
+
+
 ### Campo Minado
+
+
+https://github.com/gefgu/ed1/assets/53129852/8c62617f-fc88-4fde-9052-5b264fe4dbda
+
