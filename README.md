@@ -83,3 +83,8 @@ https://github.com/gefgu/ed1/assets/53129852/8c62617f-fc88-4fde-9052-5b264fe4dbd
 ## Extra
 
 ### Prettier no VS Code (Formatação de Código)
+
+
+
+https://github.com/gefgu/ed1/assets/53129852/fd738cea-36eb-4c27-a617-f62d0fbc0c31
+
