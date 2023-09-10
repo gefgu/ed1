@@ -7,8 +7,10 @@ int max(List *l)
     int max;
     max = l->data;
     List *t = l->next;
-    for (; t != NULL; t = t->next) {
-        if(t->data > max) max = t->data;
+    for (; t != NULL; t = t->next)
+    {
+        if (t->data > max)
+            max = t->data;
     }
     return max;
 }

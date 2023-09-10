@@ -21,9 +21,9 @@ int main()
 {
   int k;
   List *A = NULL, *B = NULL;
-  for (k = 16; k >= 6; k -= 2)
+  for (k = 0; k <= 30; k += 5)
     A = insert(A, k);
-  for (k = 20; k >= 0; k -= 2)
+  for (k = 0; k <= 30; k += 3)
     B = insert(B, k);
   print(A);
   print(B);
