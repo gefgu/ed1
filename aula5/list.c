@@ -20,26 +20,28 @@ List *insert_back(List *l, int k)
 List *removek(List *l, int k)
 {
   /*Terminar*/
+  List *n;
   if (l != NULL)
   {
+    n = l->next;
+
+    // Caso seja na cabeça
     if (l->data == k)
     {
-      if (l->next != NULL)
-      {
-        l->data = l->next->data;
-        l->next = l->next->next;
-      }
-      else
-      {
-        l = NULL;
-        free(l);
-      }
+      free(l);
+      return n;
+    }
+    else if (n != NULL && n->data == k)
+    {
+      l->next = n->next;
+      free(n);
     }
     else
     {
       removek(l->next, k);
     }
   }
+  return l;
 }
 
 /* */
