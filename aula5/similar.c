@@ -8,9 +8,13 @@ int similar(List *A, List *B)
   if (A != NULL && B != NULL)
   {
     igual = (A->data == B->data);
-    return igual && similar(A->next, B->next);
+    if (!igual)
+      return 0;
+    return igual && similar(A->next, B->next); // caso contrário
   }
-  return 0; // Um é nulo e o outro não
+  else if (A != NULL || B != NULL)
+    return 0; // um deles é nulo e o outro não
+  return 1;   // fim
 }
 
 /* */
@@ -19,11 +23,18 @@ int main()
   int k;
   List *A = NULL, *B = NULL;
   for (k = 10; k >= 0; k -= 2)
-    A = insert(A, k);
-  for (k = 10; k >= 2; k -= 2)
-    B = insert(B, k);
+    A = insert_back(A, k);
+  for (k = 10; k >= 0; k -= 2)
+    B = insert_back(B, k);
+
+  printf("Lista A = ");
   print(A);
+  printf("\n");
+
+  printf("Lista B = ");
   print(B);
+  printf("\n");
+
   printf("%d\n", similar(A, B));
   destroy(A);
   destroy(B);
