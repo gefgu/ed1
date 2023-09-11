@@ -11,16 +11,18 @@
 #define FALSE 0
 
 /*Structure*/
-typedef struct node { 
+typedef struct node
+{
   int data;
   struct node *next;
 } Node, List;
 
 /*Interface:*/
-List* create ();
-void print (List *l);
-void destroy (List *l);
-List* insert_back (List *l, int k);
-List* removek (List *l, int k);
+List *create();
+void print(List *l);
+void destroy(List *l);
+List *insert_back(List *l, int k);
+List *removek(List *l, int k);
+List *remove_all(List *l, int k);
 
 #endif

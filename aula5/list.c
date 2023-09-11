@@ -44,6 +44,35 @@ List *removek(List *l, int k)
   return l;
 }
 
+List *remove_all(List *l, int k)
+{
+  /*Terminar*/
+  List *n;
+  if (l != NULL)
+  {
+    n = l->next;
+
+    // Caso seja na cabeça
+    if (l->data == k)
+    {
+      free(l);
+      n = remove_all(n, k);
+      return n;
+    }
+    else if (n != NULL && n->data == k)
+    {
+      l->next = n->next;
+      free(n);
+      l->next = remove_all(l->next, k);
+    }
+    else
+    {
+      remove_all(l->next, k);
+    }
+  }
+  return l;
+}
+
 /* */
 void print(List *l)
 {
