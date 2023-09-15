@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#define RED "\x1B[31m"
+#define RESET "\x1B[0m"
 
 #define TRUE 1
 #define FALSE 0
@@ -15,6 +17,26 @@ void print(int sudoku[][9], int n)
     {
       if (sudoku[r][c] == 0)
         printf("  ");
+      else
+        printf("%d ", sudoku[r][c]);
+    }
+    printf("\n");
+  }
+}
+
+void print_styled(int original_sudoku[0][9], int sudoku[][9], int n)
+{
+  int r, c, v;
+  for (r = 0; r < n; r++)
+  {
+    for (c = 0; c < n; c++)
+    {
+      if (sudoku[r][c] == 0)
+        printf("  ");
+      else if (original_sudoku[r][c] == 0)
+      {
+        printf(RED "%d " RESET, sudoku[r][c]);
+      }
       else
         printf("%d ", sudoku[r][c]);
     }
@@ -84,8 +106,9 @@ int check(int sudoku[][9], int r, int c, int n, int v)
 }
 
 /* */
-int solve(int sudoku[][9], int n)
+int solve(int original_sudoku[0][9], int sudoku[][9], int n)
 {
+  struct timespec second, nano = {0, 30000000};
   int r, c, v;
   int i;
   for (r = 0; r < n; r++)
@@ -100,7 +123,10 @@ int solve(int sudoku[][9], int n)
           if (check(sudoku, r, c, n, i))
           {
             sudoku[r][c] = i;
-            if (solve(sudoku, n))
+            system("clear");
+            print_styled(original_sudoku, sudoku, n);
+            nanosleep(&nano, &second);
+            if (solve(original_sudoku, sudoku, n))
               return TRUE;
           }
         }
@@ -162,11 +188,21 @@ int main()
       {0,0,9,8,0,0,0,3,0},
       {7,0,0,5,0,1,0,0,0}};*/
 
+  int original_sudoku[9][9];
+  int i, j;
+  for (i = 0; i < 9; i++)
+  {
+    for (j = 0; j < 9; j++)
+    {
+      original_sudoku[i][j] = sudoku[i][j];
+    }
+  }
+
   printf("Jogo:\n");
   print(sudoku, n);
   printf("\n");
 
-  solve(sudoku, n);
+  solve(original_sudoku, sudoku, n);
 
   printf("Solução:\n");
   print(sudoku, n);
