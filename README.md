@@ -86,6 +86,14 @@ https://github.com/gefgu/ed1/assets/53129852/8c62617f-fc88-4fde-9052-5b264fe4dbd
 
 ### Sudoku
 
+
+https://github.com/gefgu/ed1/assets/53129852/3ab31ef6-739f-4fff-9ea9-a1a99aac47bc
+
+
+https://github.com/gefgu/ed1/assets/53129852/911a3618-e403-460b-a1a6-dcfefc21b77c
+
+
+
 ## Extra
 
 ### Prettier no VS Code (Formatação de Código)
