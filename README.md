@@ -16,6 +16,8 @@ Os exercícios mais interessantes separados por aula:
     - [Polish Solver](#polish-solver)
     - [Labirinto](#labirinto)
     - [Campo Minado](#campo-minado)
+  - [Aula 5 - Recursão](#aula-5---recursão)
+    - [Sudoku](#sudoku)
   - [Extra](#extra)
     - [Prettier no VS Code (Formatação de Código)](#prettier-no-vs-code-formatação-de-código)
 
@@ -79,6 +81,10 @@ https://github.com/gefgu/ed1/assets/53129852/e1be2f3f-8c35-40a2-9306-5a9ce82f522
 
 https://github.com/gefgu/ed1/assets/53129852/8c62617f-fc88-4fde-9052-5b264fe4dbda
 
+
+## Aula 5 - Recursão
+
+### Sudoku
 
 ## Extra
 
