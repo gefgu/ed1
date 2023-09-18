@@ -1,0 +1,8 @@
+Procura o elemento na lista.
+Se o elemento não esta na lista, entao retorna a lista
+Se  o elemento estiver na cabeca, a cabeca se torna o proximo
+se o proximo nao for null, entao o prev do proximo vira o prev do elemento
+se o anterior nao for null, entao o proximo do anterior vira o proximo do elemento
+retorna a lista da cabeca
+
+Portanto, remove um elemento com o valor k da lista
