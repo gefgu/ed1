@@ -160,6 +160,15 @@ void print_tail_to_head(List *l)
 int middle(List *l)
 {
   /*Terminar*/
+  Node *h = l->head;
+  Node *t = l->tail;
+  while (h != NULL && t != NULL)
+  {
+    if (h == t || h->next == t)
+      return h->data;
+    h = h->next;
+    t = t->prev;
+  }
 }
 
 /**/
