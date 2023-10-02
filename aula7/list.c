@@ -198,3 +198,29 @@ int empty_queue(List *l)
 {
   return l->head == l->tail && l->head == NULL; // redundante
 }
+
+void push(List *l, int elem)
+{
+  insert_front(l, elem);
+}
+
+int pop(List *l)
+{
+  if (l->head != NULL)
+  {
+    int val = l->head->data;
+    remove_front(l);
+    return val;
+  }
+}
+
+int peek(List *l)
+{
+  if (l->head != NULL)
+    return l->head->data;
+}
+
+int empty_stack(List *l)
+{
+  return empty_queue(l);
+}
