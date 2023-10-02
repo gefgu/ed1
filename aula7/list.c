@@ -176,3 +176,25 @@ void destroy(List *l)
     }
   }
 }
+
+void enqueue(List *l, int elem)
+{
+  insert_back(l, elem);
+}
+
+int dequeue(List *l)
+{
+  remove_front(l);
+}
+
+int front(List *l)
+{
+  if (l->head != NULL)
+    return l->head->data;
+  return ERROR;
+}
+
+int empty_queue(List *l)
+{
+  return l->head == l->tail && l->head == NULL; // redundante
+}
