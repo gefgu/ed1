@@ -27,7 +27,7 @@ void swap(Cadastro *A, int i, int j)
   A[j] = tmp;
 }
 
-/* */
+/* Unstable */
 void selection_sort(Cadastro *A, int n)
 {
   /*Terminar*/
@@ -47,7 +47,7 @@ void selection_sort(Cadastro *A, int n)
   }
 }
 
-/* */
+/* Stable */
 void insertion_sort(Cadastro *A, int n)
 {
   /*Terminar*/
@@ -93,8 +93,8 @@ int main(int argc, char *argv[])
   print(A, n);
   printf("\n");
 
-  // selection_sort (A, n);
-  insertion_sort(A, n);
+  selection_sort(A, n);
+  // insertion_sort(A, n);
 
   printf("Ordenação: \n");
   print(A, n);

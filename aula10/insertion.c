@@ -1,5 +1,13 @@
 #include "utils.h"
 
+/* TEMPOS */
+// 10: 0.00
+// 100: 0.00
+// 1000: 0.00
+// 10000: 0.05
+// 100000: 5.37
+// 200000: 21.42
+
 /* */
 void insertion_sort(int *A, int n)
 {
@@ -42,9 +50,9 @@ int main(int argc, char *argv[])
   }
 
   start = clock();
-  print(A, n, "Input");
+  // print(A, n, "Input");
   insertion_sort(A, n);
-  print(A, n, "Sorted");
+  // print(A, n, "Sorted");
   end = clock();
   elapsed_time = (end - start) / (double)CLOCKS_PER_SEC;
   printf("Running time: %.2f\n", elapsed_time);
