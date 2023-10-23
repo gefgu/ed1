@@ -27,6 +27,22 @@ void swap(Cadastro *A, int i, int j)
   A[j] = tmp;
 }
 
+/* Stable */
+void bubble_sort(Cadastro *A, int n)
+{
+  int i, j, aux;
+  for (i = n - 1; i > 0; i--)
+  {
+    for (j = 0; j < i; j++)
+    {
+      if (strcmp(A[j + 1].nome, A[j].nome) < 0)
+      {
+        swap(A, j, j + 1);
+      }
+    }
+  }
+}
+
 /* Unstable */
 void selection_sort(Cadastro *A, int n)
 {
@@ -93,7 +109,8 @@ int main(int argc, char *argv[])
   print(A, n);
   printf("\n");
 
-  selection_sort(A, n);
+  bubble_sort(A, n);
+  // selection_sort(A, n);
   // insertion_sort(A, n);
 
   printf("Ordenação: \n");
