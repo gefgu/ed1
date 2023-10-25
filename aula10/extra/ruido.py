@@ -3,7 +3,9 @@ import numpy as np
 
 
 image = cv2.imread("lena.pgm")
-grayscale_image = cv2.imread("lena.pgm", -1)
+grayscale_image = cv2.imread("../urso.pgm", -1)
+
+print(grayscale_image.shape)
 
 box_size = 3
 final_image = np.zeros((grayscale_image.shape), dtype=np.uint8)
@@ -31,7 +33,7 @@ for y in range(box_size, grayscale_image.shape[0] - box_size):
       flatenned[0][j] = chave
       if(x > 300 and y > 300):
         cv2.imshow("Flatenned", flatenned)
-        cv2.waitKey(700)
+        cv2.waitKey(100)
 
     final_image[y, x] = flatenned[0, int((box_size*box_size)/2)]
 
