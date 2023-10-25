@@ -8,8 +8,8 @@ st.text("Altos valores iniciais para x, y, 'box size' podem resultar em delay.")
 
 btn = st.button("Play")
 
-image = cv2.imread("lena.pgm")
-grayscale_image = cv2.imread("lena.pgm", -1)
+image = cv2.imread("./lena.pgm")
+grayscale_image = cv2.imread("./lena.pgm", -1)
 final_image = np.zeros((grayscale_image.shape), dtype=np.uint8)
 
 box_size = st.slider("Box Size", 3, 25, 3, 2)
