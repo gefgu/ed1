@@ -9,9 +9,18 @@ st.text("Altos valores iniciais para x, y, 'box size' podem resultar em delay.")
 
 btn = st.button("Play")
 
-image = cv2.imread("./lena.png")
-grayscale_image = cv2.imread("./lena.png", -1)
-final_image = np.zeros((grayscale_image.shape), dtype=np.uint8)
+try:
+  image = cv2.imread("./lena1.png")
+  grayscale_image = cv2.imread("./lena1.png", -1)
+  final_image = np.zeros((grayscale_image.shape), dtype=np.uint8)
+except:
+  url = "https://raw.githubusercontent.com/gefgu/ed1/main/aula10/extra/lena.pgm"
+  response = requests.get(url)
+  with open("lena1.pgm", "wb") as f:
+    f.write(response.content)
+  image = cv2.imread("lena1.pgm")
+  grayscale_image = cv2.imread("lena1.pgm", -1)
+  final_image = np.zeros((grayscale_image.shape), dtype=np.uint8)
 
 box_size = st.slider("Box Size", 3, 25, 3, 2)
 
