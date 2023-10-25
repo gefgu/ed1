@@ -2,12 +2,15 @@ import streamlit as st
 import cv2
 import numpy as np
 from time import sleep
+import os
 
 st.title("Simulador de Filtro da Mediana")
 st.text("Altos valores iniciais para x, y, 'box size' podem resultar em delay.")
 
 btn = st.button("Play")
 
+print(os.listdir("."))
+print(os.listdir("./app/static/"))
 image = cv2.imread("./app/static/lena.pgm")
 grayscale_image = cv2.imread("./app/static/lena.pgm", -1)
 final_image = np.zeros((grayscale_image.shape), dtype=np.uint8)
