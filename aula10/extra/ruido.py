@@ -3,9 +3,7 @@ import numpy as np
 
 
 image = cv2.imread("lena.pgm")
-grayscale_image = cv2.imread("../urso.pgm", -1)
-
-print(grayscale_image.shape)
+grayscale_image = cv2.imread("lena.pgm", -1)
 
 box_size = 3
 final_image = np.zeros((grayscale_image.shape), dtype=np.uint8)
