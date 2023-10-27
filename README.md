@@ -18,6 +18,8 @@ Os exercícios mais interessantes separados por aula:
     - [Campo Minado](#campo-minado)
   - [Aula 5 - Recursão](#aula-5---recursão)
     - [Sudoku](#sudoku)
+  - [Aula 10 - Insertion Sort](#aula-10---insertion-sort)
+    - [Filtro da Mediana](#filtro-da-mediana)
   - [Extra](#extra)
     - [Prettier no VS Code (Formatação de Código)](#prettier-no-vs-code-formatação-de-código)
 
@@ -91,6 +93,12 @@ https://github.com/gefgu/ed1/assets/53129852/3ab31ef6-739f-4fff-9ea9-a1a99aac47b
 
 
 https://github.com/gefgu/ed1/assets/53129852/911a3618-e403-460b-a1a6-dcfefc21b77c
+
+## Aula 10 - Insertion Sort
+
+### Filtro da Mediana
+
+https://github.com/gefgu/ed1/assets/53129852/5f737bcc-beb3-4d0e-8d33-3137733ddd6f
 
 
 
