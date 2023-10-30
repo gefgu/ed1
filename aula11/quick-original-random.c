@@ -1,41 +1,39 @@
 #include "utils.h"
 
-int partition(int A[], int left, int right)
+/* */
+int partition_hoare(int A[], int left, int right)
 {
-  /*Terminar*/
-  int i, j, pivo;
-  pivo = A[right];
-  i = left - 1;
-  for (j = left; j <= right - 1; j++)
+  int rand_choice = left + rand() % (right - left + 1);
+  swap(A, left, rand_choice);
+  int pivot = A[left];
+  int i = left - 1;
+  int j = right + 1;
+  while (1)
   {
-    if (A[j] < pivo)
+    do
+    {
+      j--;
+    } while (A[j] > pivot);
+    do
     {
       i++;
-      swap(A, j, i);
-    }
+    } while (A[i] < pivot);
+    if (i < j)
+      swap(A, i, j);
+    else
+      return j;
   }
-  swap(A, right, i + 1);
-  return i + 1;
-}
-
-int partition_random(int A[], int left, int right)
-{
-  /*Terminar*/
-  int rand_choice = left + rand() % (right - left + 1);
-  swap(A, right, rand_choice);
-  return partition(A, left, right);
 }
 
 /* */
 void quick_sort(int *A, int left, int right)
 {
-  /*Terminar*/
-  int p;
+  int pivot;
   if (left < right)
   {
-    p = partition_random(A, left, right);
-    quick_sort(A, left, p - 1);
-    quick_sort(A, p + 1, right);
+    pivot = partition_hoare(A, left, right);
+    quick_sort(A, left, pivot);
+    quick_sort(A, pivot + 1, right);
   }
 }
 
@@ -61,8 +59,8 @@ int main(int argc, char *argv[])
 
   for (i = 0; i < n; i++)
   {
-    A[i] = rand() % (n + 1); /*valores aleatórios*/
-    // A[i] = i; /*ordem crescente*/
+    // A[i] = rand() % (n+1); /*valores aleatórios*/
+    A[i] = i; /*ordem crescente*/
     // A[i] = n-i; /*ordem descrente*/
     // A[i] = 0; /*iguais*/
   }
