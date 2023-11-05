@@ -1,34 +1,5 @@
 #include "utils.h"
 
-/* TEMPOS - Aleatória*/
-// 10: 0.00
-// 100: 0.00
-// 1000: 0.00
-// 10000: 0.01
-// 100000: 0.04
-// 200000: 0.05
-
-/* TEMPOS - Crescente*/
-// 10: 0.00
-// 100: 0.00
-// 1000: 0.00
-// 10000: 0.25
-// 100000: 25.09
-
-/* TEMPOS - Decrescente*/
-// 10: 0.00
-// 100: 0.00
-// 1000: 0.00
-// 10000: 0.17
-// 100000: 16.98
-
-/* TEMPOS - Iguais*/
-// 10: 0.00
-// 100: 0.00
-// 1000: 0.00
-// 10000: 0.13
-// 100000: 9.16
-
 /* */
 int partition(int A[], int left, int right)
 {
@@ -51,13 +22,25 @@ int partition(int A[], int left, int right)
 /* */
 void quick_sort(int *A, int left, int right)
 {
-  /*Terminar*/
-  int p;
-  if (left < right)
+  // Caso seja em ordem crescente, será ordenado iterativamente pelo while
+  // Caso o pivo sempre seja o meio, metade (direita) será recursiva e a outra metade iterative.
+  // Como é dividido sucessivamente, complexidade da stack será log_2 n
+  while (left < right)
   {
-    p = partition(A, left, right);
-    quick_sort(A, left, p - 1);
-    quick_sort(A, p + 1, right);
+    int pivot = partition(A, left, right);
+    int half = ((right - left) / 2) + left;
+
+    // Faz menor lado primeiro
+    if (pivot >= half)
+    {
+      quick_sort(A, pivot + 1, right);
+      right = pivot - 1;
+    }
+    else
+    {
+      quick_sort(A, left, pivot - 1);
+      left = pivot + 1;
+    }
   }
 }
 
@@ -83,10 +66,10 @@ int main(int argc, char *argv[])
 
   for (i = 0; i < n; i++)
   {
-    // A[i] = rand() % (n + 1); /*valores aleatórios*/
+    A[i] = rand() % (n + 1); /*valores aleatórios*/
     // A[i] = i; /*ordem crescente*/
     // A[i] = n - i; /*ordem descrente*/
-    A[i] = 0; /*iguais*/
+    // A[i] = 0; /*iguais*/
   }
 
   start = clock();
