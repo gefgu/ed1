@@ -1,11 +1,5 @@
 #include "utils.h"
 
-/*
-  Usa parafusos para ordenar porcas
-  Em seguida, usa a porca do parafuso do pivo
-  Para ordenar os parafusos
-*/
-
 int partition(char *porcas, char *parafusos, int left, int right)
 {
   // Primeiro joga o match na direita
