@@ -22,9 +22,9 @@ int merge(int A[], int l, int m, int r, int O[], int rlevel)
 
   while (i <= m)
   {
-    if (i == m)
+    if (i < m)
     {
-      printf("(%d, %d) ", A[i], A[r]);
+      printf("(%d, %d) ", A[m], A[i]);
       inv++;
     }
     O[k++] = A[i++];
